@@ -3,6 +3,7 @@ package studio9;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
+import java.util.Map.Entry;
 
 import support.cse131.NotYetImplementedException;
 
@@ -21,7 +22,28 @@ public class NameToHeight {
 		Scanner in = new Scanner(System.in);
 
 		// FIXME
-		throw new NotYetImplementedException();
+		Map<String, Integer> nameToHeight = new HashMap<>();
+		nameToHeight.put("Chloe", 167);
+		nameToHeight.put("Nicole", 167);
+		nameToHeight.put("Jenny", 158);
+		nameToHeight.put("Aisha", 167);
+		
+		//one method
+		
+//		for(Entry<String, Integer> pbEntry : nameToHeight.entrySet()) {
+//			System.out.println(pbEntry.getKey() + ": " + pbEntry.getValue());
+//			if(in.next() == "quit") {
+//				return;
+//			}
+//		}
+		//second method
+		System.out.println("Enter a name:");
+		String name = in.next();
+		for(Entry<String, Integer> pbEntry : nameToHeight.entrySet())
+		{
+			if(pbEntry.getKey().equals(name)) {
+				System.out.println(name + ": " + pbEntry.getValue());
+			}
 
-	}
+		}}
 }
